@@ -11,7 +11,7 @@ import time
 
 context = zmq.Context()
 socket = context.socket(zmq.REP)
-socket.bind("tcp://*:6754")
+socket.bind("tcp://*:----") # INSERT HOST HERE
 
 while True:
     #  Wait for request from client
@@ -28,7 +28,7 @@ while True:
     login_pass = login_info["password"]
 
     result = False
-    if os.path.exists("credentials.txt"):
+    if os.path.exists("credentials.txt"):   # You change the name of text file, if you prefer
         try:
             print("Searching file...")
             time.sleep(1)
@@ -48,4 +48,4 @@ while True:
 
     # Send response - True if account exists, False if it does not
     print(f'Responding with: {result}\n')
-    socket.send_pyobj(result)   # Send as bool
+    socket.send_pyobj(result)   # Send boolean as response

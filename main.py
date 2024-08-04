@@ -8,7 +8,7 @@ import zmq
 def login():
     # Connecting to log in server
     socket = context.socket(zmq.REQ)
-    socket.connect("tcp://localhost:6754")
+    socket.connect("tcp://localhost:----")  # INSERT HOST HERE
 
     # Get user input
     user_input = input("Enter Username: ")
@@ -33,10 +33,7 @@ def login():
 
 if __name__ == "__main__":
     context = zmq.Context()  # Set up ZMQ
-
-    while True:
-        login()
-
+    login()
     context.term()  # Closes out ZMQ
 
 
