@@ -1,11 +1,5 @@
 # Microservice A - Login Authentication
 
-## Group Communication Contract
-- We will communicate via Teams.
-- We will respond to posts within 24 hours.
-- We will create and follow deadlines to ensure no one falls behind.
-- We will communicate with each other if one of us begins to fall behind.
-
 ## How to Request Data
 ***
 To request data, prompt the user for their username and password.
